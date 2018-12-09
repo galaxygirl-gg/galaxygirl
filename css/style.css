@@ -78,7 +78,7 @@ div.header,div.projects{
 }
 div.projects{
   min-height: 46%;
-  background-image: url("../aboutbg.jpg");
+  background-image: url("../images/aboutbg.jpg");
 }
 #slider{
   margin-left: 10%;
@@ -163,7 +163,7 @@ div.header {
   background-size: 100% 100%;
 
   min-height: 93%;
-  background-image: url("../headerbg.jpg");
+  background-image: url("../images/headerbg.jpg");
 }
 nav {
   z-index: 3;
