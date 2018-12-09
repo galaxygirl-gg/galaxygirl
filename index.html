@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>It's Winter Here ⛄</title>
+  <link rel="icon" type="image/ico" href="images/snowflake.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Pinyon+Script|Playfair+Display" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("hgroup").fadeOut();
+    });
+  </script>
+  <script type="text/javascript">
+    $(window).on('scroll', function (){
+      if($(window).scrollTop()) {
+        $("nav").addClass('white');
+        $("nav ul li a").addClass("black-a");
+        $("nav h1").fadeOut();
+      }
+      else {
+        $("nav h1").fadeIn();
+        $('nav').removeClass('white');
+        $("nav ul li a").removeClass("black-a");
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="header">
+    <nav>
+      <ul>
+        <li class="inactive"><a href="#about">ABOUT</a></li>
+        <li class="inactive"><a href="#projects">PROJECTS</a></li>
+        <li class="inactive"><a href="#contact">CONTACT</a></li>
+      </ul>
+      <div class="logo"><h1>GG</h1></div>
+      <ul>
+        <li class="inactive"><a href="#overview">OVERVIEW/UPCOMING</a></li>
+      </ul>
+    </nav>
+    <div class="heading">
+      <h2>"im a supernova baby"</h2>
+      <h3>$("bless").up()</h3>
+      <h3>🖤 💜 💙</h3>
+    </div>
+  </div>
+  <a name="about"><section class="tsection">
+    <h1 class="t-h1">about</h1>
+    <hr class="styled-hr"/>
+    <h2 class="t-h2">hi im kayla...</h2>
+    <div class="info">
+      <img class="profile-img"src="images/profile1.jpg">
+      <p class="about-text">I'm twenty years old ❤️<br>I'm a third-year undergrad studying informatics<br> with a specialization in human-computer interaction (HCI).<br> And this is my website hehe<br>Anyway, happy winter ❄️❄️</p>
+    </div>
+  </section></a>
+  <a name="projects"><div class="projects">
+    <h1 class="projects-h1">projects</h1>
+    <hr class="styled-hr white-hr"/>
+    <a href="https://play.google.com/store/apps/details?id=com.KitMew.BTSMessenger&hl=en_US" target="_blank"><img id="icon1"class="icon" src="images/btsMessenger.png"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.KitMew.BTSMessenger2&hl=en_US" target="_blank"><img id="icon2"class="icon" src="images/btsMessenger2.png"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.KitMew.MyKpopQuiz&hl=en_US" target="_blank"><img id="icon3"class="icon" src="images/kpopquizpro.png"></a>
+    <hgroup class="text-bubble btsm1">
+      <h1 class="bubble-h1">BTS Messenger</h1>
+      <p class="bubble-p"><strong>2 million downloads</strong><br>OG BTS Messenger ❤️ (Unity & C#)<p>
+    </hgroup>
+    <hgroup class="text-bubble btsm2">
+      <h1 class="bubble-h1">BTS Messenger 2</h1>
+      <p class="bubble-p"><strong>~500k downloads</strong><br>BTS Messenger version 2 ❤️ (Unity & C#)<p>
+    </hgroup>
+    <hgroup class="text-bubble kqp">
+      <h1 class="bubble-h1">Kpop Quiz Pro</h1>
+      <p class="bubble-p"><strong>~500k downloads</strong><br>Kpop quiz game ❤️ (Unity & C#)<p>
+    </hgroup>
+  </div></a>
+  <a name="contact"><section class="tsection">
+    <h1 class="t-h1">contact me</h1>
+    <hr class="styled-hr"/>
+    <form action="contact.php" method="post">
+      <input class="subject-input"type="text" name="subject" placeholder="subject" required><br>
+      <input class="email-input"type="text" name="mail" placeholder="your email address" required><br>
+      <textarea class="message-input" name="message" style= "resize:none" placeholder="message"></textarea><br>
+      <button type="submit" name="submit">send</button>
+    </form>
+  </section></a>
+  <a name="overview"><div id="slider">
+      <h1 class="arrow left-arrow"><</h1>
+      <img class="slide first-img"src="images/kaylaxsnowpear.png"></li>
+      <img class="slide"src="images/btsmmoqup.png"></li>
+      <img class="slide"src="images/btsm2moqup.png"></li>
+      <h1 class="arrow right-arrow">></h1>
+    </ul>
+  </div></a>
+  <script>
+    $(".projects a img").mouseover(
+      function(){
+        if($(this).attr("id")==="icon1"){
+          $("hgroup.btsm1").fadeIn();
+        } else if($(this).attr("id")==="icon2"){
+          $("hgroup.btsm2").fadeIn();
+        } else {
+          $("hgroup.kqp").fadeIn();
+        };
+      }).mouseout(
+      function(){
+        if($(this).attr("id")==="icon1"){
+          $("hgroup.btsm1").fadeOut();
+        } else if($(this).attr("id")==="icon2"){
+          $("hgroup.btsm2").fadeOut();
+        } else {
+          $("hgroup.kqp").fadeOut();
+        };
+      }
+    );
+  </script>
+  <script>
+    $("#slider .right-arrow").click(function(){
+      if ($("#slider .first-img").css("margin-left")!= "-"+($("#slider").width()*2)+"px"){
+        $("#slider .first-img").animate({"margin-left":"+=-100%"});
+      } else {
+        $("#slider .first-img").animate({"margin-left":"0%"});
+      }
+    });
+    $("#slider .left-arrow").click(function(){
+      if ($("#slider .first-img").css("margin-left")!="0px") {
+        $("#slider .first-img").animate({"margin-left":"+=100%"});
+      }
+    });
+  </script>
+</body>
+</html>
