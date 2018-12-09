@@ -1,2 +1,2 @@
 # galaxygirl
-files for www.galaxygirl.me
+files for personal website "galaxygirl.me"
