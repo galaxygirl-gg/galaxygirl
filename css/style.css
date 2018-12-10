@@ -34,38 +34,6 @@ div.heading {
   top: 33%;
   text-align: center;
 }
-.profile-1{
-  left: 5%;
-}
-.profile-2{
-  right: 5%;
-  bottom: 0;
-}
-.profile-1,.profile-2{
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  height: 230px;
-  width: 205px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  animation-name: border-trans;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-
-  border: 5px solid;
-  border-radius: 50%;
-}
-@keyframes border-trans {
-  0%{
-    border-color: black;
-  }
-  50%{
-    border-color: white;
-  }
-  100%{
-    border-color: black;
-  }
-}
 div.header,div.projects{
   background-attachment: fixed;
   position: relative;
@@ -224,7 +192,6 @@ nav ul li a:hover {
   align-items: center;
 }
 .about-text{
-  text-align: left;
   margin: 30px;
   margin-left: 0;
   margin-top: 10px;
@@ -241,7 +208,7 @@ nav ul li a:hover {
 .profile-img1{
   left: 10%;
 }
-.profile-img-2{
+.profile-img2{
   right: 10%;
 
 }
